@@ -15,3 +15,5 @@ A few resources to get you started if this is your first Flutter project;
     실행 및 깃 허브 연동 확인 완료!
 
 1주차 스프링 부트 개발환경, 테스트완료
+
+3주차 포트폴리오 작성하기 완료
