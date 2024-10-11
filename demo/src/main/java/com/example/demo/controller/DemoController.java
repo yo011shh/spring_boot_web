@@ -44,12 +44,22 @@ model.addAttribute("para2", 002);
 return "thymeleaf_test1";
 }
 @Autowired
-    private TestService testService;
+    TestService testService;
 @GetMapping("/testdb")
 public String getAllTestDBs(Model model) {
 TestDB test = testService.findByName("홍길동");
-model.addAttribute("data4", test);
-System.out.println("데이터 출력 디버그 : " + test);
+TestDB test1 = testService.findByName("아저씨");
+TestDB test2 = testService.findByName("꾸러기");
+model.addAttribute( "data4", test);
+model.addAttribute( "data5", test1);
+model.addAttribute( "data6", test2);
+
+
+System.out.println("데이터 출력 디버그 : " + test+test1+test2);
 return "testdb";
 }
-} 
+/*@GetMapping("/article_list")
+public String article_list() {
+return "article_list";
+}*/
+}
