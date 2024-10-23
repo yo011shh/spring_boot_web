@@ -1,4 +1,4 @@
-package com.example.demo.controller;
+/*package com.example.demo.controller;
 import com.example.demo.model.domain.Article;
 import com.example.demo.model.service.AddArticleRequest;
 import com.example.demo.model.service.BlogService;
@@ -20,4 +20,4 @@ return ResponseEntity.status(HttpStatus.CREATED)
 public void favicon() {
 // 아무 작업도 하지 않음
 }
-}
+}*/
