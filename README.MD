@@ -20,3 +20,5 @@ A few resources to get you started if this is your first Flutter project;
 4주차 완료
 5주차 완료
 6주차 완료
+7주차 완료
+`
