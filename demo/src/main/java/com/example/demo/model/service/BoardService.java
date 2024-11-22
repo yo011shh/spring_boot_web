@@ -47,4 +47,7 @@ public void update(Long id, AddBoardRequest request) {
     blogRepository.save(board); // Article 객체에 저장
     });
     }
+public void delete(Long id) {
+    blogRepository.deleteById(id);
+    }    
 }

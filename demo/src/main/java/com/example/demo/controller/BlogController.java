@@ -19,7 +19,7 @@ import com.example.demo.model.service.AddBoardRequest;
 import com.example.demo.model.service.BlogService;
 import com.example.demo.model.service.BoardService;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
+
 import java.util.List;
 import java.util.Optional;
 
@@ -112,6 +112,11 @@ public String deleteArticle(@PathVariable Long id) {
 blogService.delete(id);
 return "redirect:/article_list";
 }
+@DeleteMapping("/api/board_delete/{id}")
+public String deleteBoard(@PathVariable Long id) {
+boardService.delete(id);
+return "redirect:/board_list";
+}
 // 생략…
 @GetMapping("/board_write")
 public String board_write() {
@@ -121,14 +126,14 @@ return "board_write";
 public String board_list(Model model, @RequestParam(defaultValue = "0") int page, @RequestParam(defaultValue = "") String keyword) {
 PageRequest pageable = PageRequest.of(page, 3); // 한 페이지의 게시글 수
 Page<Board> list; // Page를 반환
+
 if (keyword.isEmpty()) {
 list = boardService.findAll(pageable); // 기본 전체 출력(키워드 x)
 } else {
 list = boardService.searchByKeyword(keyword, pageable); // 키워드로 검색
 }
-System.out.println("Page: " + page);
-System.out.println("Keyword: " + keyword);
-System.out.println("Total Pages: " + list.getTotalPages());
+int startnum =  (page * 3 ) + 1;
+model.addAttribute("startnum", startnum);
 model.addAttribute("boards", list); // 모델에 추가
 model.addAttribute("totalPages", list.getTotalPages()); // 페이지 크기
 model.addAttribute("currentPage", page); // 페이지 번호
