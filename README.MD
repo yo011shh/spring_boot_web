@@ -24,3 +24,23 @@ A few resources to get you started if this is your first Flutter project;
 8주차 완료
 9주차 완료
 10주차 로그인과 로그아웃 -2 완료
+11주차 메인 포트폴리오 완성
+10주차와 11주차의 도전과제 제외 모든 도전과제(연습문제) 해결!
+최종 게시판 관련 된건 거의 board를 확인 하면 됨 (일부 분리)
+최종적으로 실질적이게 사용하는 자바파일 (
+securitycofig.java
+blogcontroller.java
+filecontroller.java
+GlobalExceptionHandler.java
+board.java
+member.java
+blogrepository.java
+boardrepository.java
+memberrepository.java
+addboardrequest.java
+addmemberrequest.java
+blogservice.java
+boardserviece.java
+memberservice.java
+demoapplication.java
+)
